@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    padding: 15px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#time-display, #total-pushups {
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+/* Fortschrittsanzeige */
+#progress-bar {
+    transition: width 0.5s;
+}
+
+/* Beast Mode GIF und Text */
+#beast-mode-display {
+    margin-top: 20px;
+}
+
+#beast-mode-gif {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 20px auto;
+}
+
+#beast-mode-text {
+    font-size: 48px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    animation: blink-animation 1s infinite;
+}
+
+@keyframes blink-animation {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Ausblenden des Beast Mode-Bereichs */
+.hidden {
+    display: none;
+}

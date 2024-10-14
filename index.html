@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Push-Up Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Push-Up Master</h1>
+
+    <!-- Fortschrittsanzeige -->
+    <div style="width: 100%; background-color: #ddd;">
+        <div id="progress-bar" style="width: 0%; height: 30px; background-color: #4caf50;"></div>
+    </div>
+    <p id="progress-text">0% der 100.000 Liegestütze geschafft</p>
+
+    <!-- Push-Up Fortschritt -->
+    <p>Zeit: <span id="time-display">0</span> Sekunden</p>
+    <p>Gesamt erledigte Liegestütze: <span id="total-pushups">0</span></p>
+
+    <!-- Buttons zum Starten und Stoppen der Routine -->
+    <button onclick="startBeastMode()">Get into Beast Mode</button>
+    <button onclick="stopStopwatch()">End Beast Mode</button>
+
+    <!-- GIF und blinkender Text für Beast Mode -->
+    <div id="beast-mode-display" class="hidden">
+        <img id="beast-mode-gif" src="https://images.app.goo.gl/DKrnC7mGhN6cApDCA" alt="The Rock Beast Mode" />
+        <h2 id="beast-mode-text">BEAST MODE ON</h2>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+
+    <!-- Firebase Konfiguration -->
+    <script>
+      // Deine Firebase-Konfiguration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAHTJ2DVnigxqJbJhXP_DZrSE3fNPGEzQg",
+        authDomain: "beast-mode-100k-push-ups.firebaseapp.com",
+        projectId: "beast-mode-100k-push-ups",
+        storageBucket: "beast-mode-100k-push-ups.appspot.com",
+        messagingSenderId: "501779084715",
+        appId: "1:501779084715:web:2b70cba2ed593e2aee8eee",
+        measurementId: "G-L69R1ZQ1MY"
+      };
+
+      // Firebase initialisieren
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- App Script -->
+    <script src="app.js"></script>
+</body>
+</html>
